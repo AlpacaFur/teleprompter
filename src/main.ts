@@ -14,6 +14,10 @@ const enableMediaControlElem = document.getElementById(
   "mediaControlSetting"
 ) as HTMLInputElement
 
+document.getElementById("sidePadding")!.addEventListener("change", (e) => {
+  text.classList.toggle("sidePadding", (e.target as HTMLInputElement)!.checked)
+})
+
 settingsButton.addEventListener("click", () => {
   settingsModal.classList.toggle("hidden")
 })
