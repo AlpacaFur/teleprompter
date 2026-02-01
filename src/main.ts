@@ -65,6 +65,13 @@ document.getElementById("slower")!.addEventListener("click", () => {
   updateTargetDuration()
 })
 
+duration.addEventListener("input", () => {
+  let value = Number(duration.value)
+  if (!Number.isNaN(value)) {
+    targetDuration = value
+  }
+})
+
 function updateTargetDuration() {
   duration.value = `${targetDuration}`
 }
