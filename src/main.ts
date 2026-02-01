@@ -28,8 +28,10 @@ topButton.addEventListener("click", () => {
 ;(document.getElementById("flipText") as HTMLInputElement)!.addEventListener(
   "change",
   (e) => {
-    text.classList.toggle("flipped", (e.target as HTMLInputElement)!.checked)
-    flipped = !flipped
+    let checkFlipped = (e.target as HTMLInputElement)!.checked
+    text.classList.toggle("flipped", checkFlipped)
+    flipped = checkFlipped
+    setScrollPercentage(0)
   }
 )
 
