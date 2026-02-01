@@ -155,7 +155,7 @@ input::-webkit-inner-spin-button {
 
 .padding {
   /* height: calc(50dvh - 3em); */
-  height: calc(25dvh - 3em);
+  height: calc(5dvh - 3em);
 }
 
 .bottomPadding {
