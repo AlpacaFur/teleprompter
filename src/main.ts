@@ -29,6 +29,7 @@ topButton.addEventListener("click", () => {
   "change",
   (e) => {
     text.classList.toggle("flipped", (e.target as HTMLInputElement)!.checked)
+    flipped = !flipped
   }
 )
 
@@ -64,6 +65,7 @@ function updateTargetDuration() {
 let playing = false
 let startTime = Date.now()
 let startPercent = 0
+let flipped = false
 
 function play() {
   if (enableMediaControl) {
@@ -150,13 +152,14 @@ function scrollFrame() {
 
 function calcCurrentPercentage() {
   const elem = document.scrollingElement!
-
-  return elem.scrollTop / (elem.scrollHeight - elem.clientHeight)
+  const percentage = elem.scrollTop / (elem.scrollHeight - elem.clientHeight)
+  return flipped ? 1 - percentage : percentage
 }
 
 function setScrollPercentage(percentage: number) {
   const elem = document.scrollingElement!
-  const targetScroll = percentage * (elem.scrollHeight - elem.clientHeight)
+  const realPercentage = flipped ? 1 - percentage : percentage
+  const targetScroll = realPercentage * (elem.scrollHeight - elem.clientHeight)
   elem.scrollTop = targetScroll
 }
 

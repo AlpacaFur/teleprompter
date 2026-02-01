@@ -155,5 +155,5 @@ input::-webkit-inner-spin-button {
 }
 
 .flipped {
-  transform: scaleX(-1);
+  transform: scaleY(-1);
 }
