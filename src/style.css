@@ -154,7 +154,12 @@ input::-webkit-inner-spin-button {
 }
 
 .padding {
-  height: calc(50dvh - 3em);
+  /* height: calc(50dvh - 3em); */
+  height: calc(25dvh - 3em);
+}
+
+.bottomPadding {
+  height: calc(65dvh - 3em);
 }
 
 .flipped {
