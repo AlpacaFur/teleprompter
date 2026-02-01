@@ -20,14 +20,12 @@ body {
   cursor: pointer;
   color: var(--accent);
   border: 2px solid var(--accent);
+  background: white;
   border-radius: 8px;
   &:hover {
     opacity: 1;
     filter: saturate(0.6);
   }
-}
-
-.border {
 }
 
 #scroll {
@@ -99,13 +97,14 @@ input::-webkit-inner-spin-button {
 }
 
 #settings {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 10px;
   width: 40px;
   height: 40px;
   font-size: 40px;
   padding: 10px;
+  z-index: 1;
 }
 
 #settings-modal {

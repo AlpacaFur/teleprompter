@@ -30,6 +30,7 @@ topButton.addEventListener("click", () => {
   (e) => {
     let checkFlipped = (e.target as HTMLInputElement)!.checked
     text.classList.toggle("flipped", checkFlipped)
+    topButton.classList.toggle("flipped", checkFlipped)
     flipped = checkFlipped
     setScrollPercentage(0)
   }
