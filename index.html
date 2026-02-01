@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teleprompter</title>
+</head>
+
+<body>
+  <div class="padding"></div>
+  <div id="settings" class="button">⚙️</div>
+  <audio src="test5.mp3" loop id="mediaHook" volume="0.0000001"></audio>
+  <div id="settings-modal" class="hidden">
+    <div id="closeSettings">✖︎</div>
+    <div class="settings-content">
+      <div>
+        <input type="checkbox" name="" id="flipText"> <label for="flipText">Flip Text</label>
+      </div>
+      <div>
+        <input type="checkbox" name="" id="mediaControlSetting"><label for="mediaControlSetting">Media Control</label>
+      </div>
+    </div>
+  </div>
+  <div contenteditable class="scroller" id="mainText" spellcheck="false">This year we revamped our electrical power
+    distribution system,
+    replacing much of our old wiring with custom PCBs. Our central power distribution board features custom regulators
+    for our low voltage components, such as the Jetson Orin Computer and PCIE card. The new Arm, Drive, and Radio Power
+    boards further simplify the wiring for their respective subsystems. A breakout board for a new MA600 magnetic
+    encoder has been created to more precisely determine the arm's position.</div>
+  <div class="padding"></div>
+  <div id="speed">
+    <div id="faster" class="button">+</div>
+    <label>
+      <input type="number" id="duration" value="20">s
+    </label>
+    <div id="slower" class="button">-</div>
+
+  </div>
+  <div id="top" class="button">↑</div>
+  <div id="scroll" class="button">▶︎</div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
